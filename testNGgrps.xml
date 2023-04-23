@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="OpenCartSuite" parallel="tests">
+<listeners>
+<listener class-name="utilities.ExtentReportManager"/>
+</listeners>
+<test thread-count="5" name="chromeTest">
+  <groups>
+  <run>
+  <include name="sanity"></include>
+  
+  </run>
+  </groups>
+    <classes>
+    <class name="testCases.RegisteringAccount"/> 
+      <class name="testCases.LoginToAccount"/>
+    </classes>
+  </test> 
+</suite> 
